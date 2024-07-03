@@ -1,0 +1,90 @@
+/* 模态框覆盖整个页面 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 确保模态框在最上层显示 */
+}
+
+/* 模态框内容容器 */
+.modal-content {
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 5px;
+  border: var(--text-color) 1px solid;
+  max-width: 400px; /* 限制模态框的最大宽度 */
+  width: 100%; /* 使用全部可用宽度 */
+}
+
+/* 模态框标题栏 */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 关闭按钮样式 */
+.close-button {
+  position: relative;
+  left: 150px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+/* 模态框主体内容 */
+.modal-body {
+  margin-top: 20px;
+}
+
+/* 输入框和标签的样式 */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* 按钮组样式 */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-group button:nth-child(1) {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  height: 100%;
+  width: 100%;
+}
+.button-group button:hover {
+  filter: brightness(0.9);
+}
